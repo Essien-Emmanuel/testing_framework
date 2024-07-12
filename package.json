@@ -15,5 +15,8 @@
   "description": "",
   "bin": {
     "vet": "./src/index.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.6.0"
   }
 }
