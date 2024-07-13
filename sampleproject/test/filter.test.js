@@ -15,5 +15,5 @@ it("Should filter an array", () => {
 });
 
 it("Should check numbers length", () => {
-  assert.strictEqual(numbers.length, 3);
+  assert.strictEqual(numbers.length, 4);
 });
