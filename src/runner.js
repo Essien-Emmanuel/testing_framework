@@ -29,11 +29,11 @@ class Runner {
         try {
           await fn();
           console.log("\n");
-          console.log("\t", desc);
+          console.log("\t", colors.green(desc));
           console.log("\t", colors.green("OK ✓✓✓ \n"));
         } catch (err) {
           const errorMsg = err.message.replace(/\n/g, "\n\t\t");
-          console.log("\t", desc);
+          console.log("\t", colors.green(desc));
           console.log("\t", colors.red(errorMsg), "\n");
         }
       };
