@@ -16,15 +16,18 @@ class Runner {
       console.log(" Testing ", colors.gray(testFile.shortName));
 
       const beforeEaches = [];
+
       global.render = render;
+
       global.beforeEach = (fn) => {
         beforeEaches.push(fn);
       };
-      global.it = (desc, fn) => {
+
+      global.it = async (desc, fn) => {
         beforeEaches.forEach((func) => func());
 
         try {
-          fn();
+          await fn();
           console.log("\n");
           console.log("\t", desc);
           console.log("\t", colors.green("OK ✓✓✓ \n"));
